@@ -1,0 +1,68 @@
+# Visual Studio ile ilgili dosyalar ve klasörler
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Windows işaretleme dosyaları
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Derlenmiş dosyalar
+bin/
+obj/
+
+# NuGet paketleri
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Derleme çıktı dosyaları
+*.dll
+*.exe
+*.pdb
+*.cache
+*.ilk
+*.log
+*.mdb
+*.obj
+*.pch
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+
+# Sonuç klasörü
+TestResults/
+
+# Diğer klasör ve dosyalar
+_ReSharper*/
+*.resharper
+*.sln.docstates
+*.ipch
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.tlog
+*.vsp
+*.vspx
+*.vspscc
+*.vssscc
+msbuild.log
+*.vsix
+*.ruleset
