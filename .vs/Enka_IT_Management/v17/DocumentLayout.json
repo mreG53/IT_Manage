@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DEV\\Enka_IT_Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\callitform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 372,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CallItForm.Designer.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.Designer.cs",
+              "RelativeDocumentMoniker": "CallItForm.Designer.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.Designer.cs",
+              "RelativeToolTip": "CallItForm.Designer.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAnwF4AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T11:50:34.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CallItForm.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
+              "RelativeDocumentMoniker": "CallItForm.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
+              "RelativeToolTip": "CallItForm.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAnwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T11:50:27.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CallItForm.cs [Design]",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
+              "RelativeDocumentMoniker": "CallItForm.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs [Design]",
+              "RelativeToolTip": "CallItForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T11:48:21.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Start.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\Start.cs",
+              "RelativeDocumentMoniker": "Start.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\Start.cs",
+              "RelativeToolTip": "Start.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAUwDIEAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:05:38.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Start.cs [Design]",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\Start.cs",
+              "RelativeDocumentMoniker": "Start.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\Start.cs [Design]",
+              "RelativeToolTip": "Start.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T12:05:37.157Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+;
+; KONICA MINOLTA 5020iSeries PS Driver UNF-File for Win
+;
+; Copyright (C) 2019 KONICA MINOLTA, INC.
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%KM%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=KOBKAA__.cat
+DriverVer=04/08/2019,1.2.1.0
+
+[DriverInfo]
+DriverName1=KONICA MINOLTA 5020i PS
+DriverName2=KONICA MINOLTA 5000i PS
+DriverName3=KONICA MINOLTA 4020i PS
+DriverName4=KONICA MINOLTA 4000i PS
+DriverCode=001f
+
+[Uninstall.DriverName1]
+DelReg=Environment_Reg.DriverName1
+DelFiles=PPD1,G_FILES,PRINT_MONITOR,PRINT_PROCESSOR
+
+[Uninstall.DriverName2]
+DelReg=Environment_Reg.DriverName2
+DelFiles=PPD2,G_FILES,PRINT_MONITOR,PRINT_PROCESSOR
+
+[Uninstall.DriverName3]
+DelReg=Environment_Reg.DriverName3
+DelFiles=PPD3,G_FILES,PRINT_MONITOR,PRINT_PROCESSOR
+
+[Uninstall.DriverName4]
+DelReg=Environment_Reg.DriverName4
+DelFiles=PPD4,G_FILES,PRINT_MONITOR,PRINT_PROCESSOR
+
+[Environment_Reg.DriverName1]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 5020i PS"
+
+[Environment_Reg.DriverName2]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 5000i PS"
+
+[Environment_Reg.DriverName3]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 4020i PS"
+
+[Environment_Reg.DriverName4]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 4000i PS"
+
+[PPD1]
+KOBKAA_A.ppd,,,1
+
+[PPD2]
+KOBKAA_B.ppd,,,1
+
+[PPD3]
+KOBKAA_C.ppd,,,1
+
+[PPD4]
+KOBKAA_D.ppd,,,1
+
+[G_FILES]
+KOBKAA_G.dll,,,1
+KOBKAA_C.dll,,,1
+KOBKAA_U.dll,,,1
+KOBKAA_S.dll,,,1
+KOBKAA_R.dll,,,1
+KOBKAA_D.dll,,,1
+KOBKAA_W.dll,,,1
+KOBKAA_C.kpd,,,1
+KOBKAA_D.kpd,,,1
+KOBKAA_M.kpd,,,1
+KOBKAA__.kpd,,,1
+KOBKAA__.ini,,,1
+KOBKAA__.chm,,,1
+KOBKAA__.unf,,,1
+KOBKAA_A.kmp,,,1
+KOBKAA_B.kmp,,,1
+KOBKAA_C.kmp,,,1
+KOBKAA_D.kmp,,,1
+KOBKAA__.gid,,,1
+
+[PRINT_MONITOR]
+KOBKAA_L.dll,,,1
+
+[PRINT_PROCESSOR]
+KOBKAA_P.dll,,,1
+
+[DestinationDirs]
+DefaultDestDir=66000
+PRINT_PROCESSOR=66001
+PRINT_MONITOR=66002
+
+[Strings]
+KM="KONICA MINOLTA"
+DiskName="KONICA MINOLTA 5020iSeries Driver Disk"

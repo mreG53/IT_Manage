@@ -1,0 +1,13 @@
+C:\DEV\Enka_IT_Management\bin\Debug\Enka_IT_Management.exe.config
+C:\DEV\Enka_IT_Management\bin\Debug\Enka_IT_Management.exe
+C:\DEV\Enka_IT_Management\bin\Debug\Enka_IT_Management.pdb
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.csproj.AssemblyReference.cache
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.CallItForm.resources
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.InstallPrinterDrivers.resources
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.Properties.Resources.resources
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.ResetPrinters.resources
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.Start.resources
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.csproj.GenerateResource.cache
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.csproj.CoreCompileInputs.cache
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.exe
+C:\DEV\Enka_IT_Management\obj\Debug\Enka_IT_Management.pdb

@@ -1,0 +1,86 @@
+;
+; KONICA MINOLTA 5020iSeries PCL Driver UNF-File for Win
+;
+; Copyright (C) 2019 KONICA MINOLTA, INC.
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%KM%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=KOBKAJ__.CAT
+DriverVer=02/12/2019,1.1.1.0
+
+[DriverInfo]
+DriverName1=KONICA MINOLTA 5020i PCL
+DriverName2=KONICA MINOLTA 5000i PCL
+DriverName3=KONICA MINOLTA 4020i PCL
+DriverName4=KONICA MINOLTA 4000i PCL
+DriverCode=001f
+
+[Uninstall.DriverName1]
+DelReg=Environment_Reg.DriverName1
+DelFiles=KOBKA_COPY,PRINT_MONITOR
+
+[Uninstall.DriverName2]
+DelReg=Environment_Reg.DriverName2
+DelFiles=KOBKA_COPY,PRINT_MONITOR
+
+[Uninstall.DriverName3]
+DelReg=Environment_Reg.DriverName3
+DelFiles=KOBKA_COPY,PRINT_MONITOR
+
+[Uninstall.DriverName4]
+DelReg=Environment_Reg.DriverName4
+DelFiles=KOBKA_COPY,PRINT_MONITOR
+
+[Environment_Reg.DriverName1]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 5020i PCL"
+
+[Environment_Reg.DriverName2]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 5000i PCL"
+
+[Environment_Reg.DriverName3]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 4020i PCL"
+
+[Environment_Reg.DriverName4]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 4000i PCL"
+
+[KOBKA_COPY]
+KOBKAJ_G.dll,,,1
+KOBKAJ_X.dll,,,1
+KOBKAJ_F.dll,,,1
+KOBKAJ_C.dll,,,1
+KOBKAJ_U.dll,,,1
+KOBKAJ_S.dll,,,1
+KOBKAJ_R.dll,,,1
+KOBKAJ_J.dll,,,1
+KOBKAJ_D.dll,,,1
+KOBKAJ_W.dll,,,1
+KOBKAJ_C.kpd,,,1
+KOBKAJ_D.kpd,,,1
+KOBKAJ_M.kpd,,,1
+KOBKAJ__.kpd,,,1
+KOBKAJ__.chm,,,1
+KOBKAJ__.unf,,,1
+KOBKAJ_A.kmp,,,1
+KOBKAJ_B.kmp,,,1
+KOBKAJ_C.kmp,,,1
+KOBKAJ_D.kmp,,,1
+KOBKAJ__.gid,,,1
+
+[PRINT_MONITOR]
+KOBKAJ_L.dll,,,1
+
+[DestinationDirs]
+DefaultDestDir=66000
+PRINT_MONITOR=66002
+
+[Strings]
+KM="KONICA MINOLTA"
+DiskName="KONICA MINOLTA 5020iSeries Driver Disk"

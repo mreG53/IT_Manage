@@ -1,0 +1,90 @@
+;
+; KONICA MINOLTA 750i FAX Driver UNF-File for Win
+;
+; Copyright (C) 2003 KONICA MINOLTA, INC.
+
+[Version]
+Signature="$Windows NT$"
+Provider=%KM%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+CatalogFile=KOAXDS__.cat
+DriverVer=02/01/2021,3.1.12.0
+
+[DriverInfo]
+DriverName1=KONICA MINOLTA 750i FAX
+DriverName2=KONICA MINOLTA 650iSeriesFAX
+DriverName3=KONICA MINOLTA 306iSeriesFAX
+DriverName4=KONICA MINOLTA 4750iSeriesFAX
+DriverCode=001f
+
+[Uninstall.DriverName1]
+DelReg=Environment_Reg.DriverName1
+DelFiles=KMFAX_COPY,PRINT_MONITOR
+
+[Uninstall.DriverName2]
+DelReg=Environment_Reg.DriverName2
+DelFiles=KMFAX_COPY,PRINT_MONITOR
+
+[Uninstall.DriverName3]
+DelReg=Environment_Reg.DriverName3
+DelFiles=KMFAX_COPY,PRINT_MONITOR
+
+[Uninstall.DriverName4]
+DelReg=Environment_Reg.DriverName4
+DelFiles=KMFAX_COPY,PRINT_MONITOR
+
+[Environment_Reg.DriverName1]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 750i FAX"
+
+[Environment_Reg.DriverName2]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 650iSeriesFAX"
+
+[Environment_Reg.DriverName3]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 306iSeriesFAX"
+
+[Environment_Reg.DriverName4]
+HKLM,"System\CurrentControlSet\Control\Print\Printers","StartOnBoot"
+HKCU,"SoftWare\KONICA MINOLTA\KONICA MINOLTA 4750iSeriesFAX"
+
+[KMFAX_COPY]
+KOAXDS_B.dll,,,1
+KOAXDS_C.dll,,,1
+KOAXDS_D.dll,,,1
+KOAXDS_E.dll,,,1
+KOAXDS_F.dll,,,1
+KOAXDS_G.dll,,,1
+KOAXDS_H.dll,,,1
+KOAXDS_J.dll,,,1
+KOAXDS_M.dll,,,1
+KOAXDS_N.dll,,,1
+KOAXDS_O.dll,,,1
+KOAXDS_R.dll,,,1
+KOAXDS_S.dll,,,1
+KOAXDS_U.dll,,,1
+KOAXDS_V.dll,,,1
+KOAXDS_W.dll,,,1
+KOAXDS_X.dll,,,1
+KOAXDS_Z.dll,,,1
+KOAXDS_C.kpd,,,1
+KOAXDS_D.kpd,,,1
+KOAXDS_M.kpd,,,1
+KOAXDS_V.kpd,,,1
+KOAXDS__.kpd,,,1
+KOAXDS__.chm,,,1
+KOAXDS__.unf,,,1
+KOAXDS_A.kmp,,,1
+
+[PRINT_MONITOR]
+KOAXDS_L.dll,,,1
+
+[DestinationDirs]
+DefaultDestDir=66000
+PRINT_MONITOR=66002
+
+[Strings]
+KM="KONICA MINOLTA"
+DiskName="KONICA MINOLTA 750i Driver Disk"

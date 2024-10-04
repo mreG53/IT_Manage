@@ -1,0 +1,588 @@
+*PPD-Adobe: "4.3"
+*% Adobe Systems Printer Description File
+*% For "KONICA MINOLTA 5020i PS" version 3010.106
+*% Copyright(C) 2019 KONICA MINOLTA, INC.
+*% Created:     12/07/18
+*% Modified:    03/01/19
+*% Platform:    Application
+
+*FormatVersion:         "4.3"
+*LanguageVersion:       Turkish
+*LanguageEncoding:      ISOLatin5
+*FileVersion:           "1.1.1"
+
+*Manufacturer:          "KONICA MINOLTA"
+*ModelName:             "KONICA MINOLTA 5020i"
+*NickName:              "KONICA MINOLTA 5020i PS"
+*ShortNickName:         "KONICA MINOLTA 5020i"
+*PCFileName:            "KM5020iU.PPD"
+*Product:               "(KONICA MINOLTA 5020i)"
+*Product:               "(KONICA MINOLTA bizhub 5020i)"
+*Product:               "(KONICA MINOLTA 5000i)"
+*Product:               "(KONICA MINOLTA bizhub 5000i)"
+*Product:               "(KONICA MINOLTA 4020i)"
+*Product:               "(KONICA MINOLTA bizhub 4020i)"
+*Product:               "(KONICA MINOLTA 4000i)"
+*Product:               "(KONICA MINOLTA bizhub 4000i)"
+*PSVersion:             "(3010.106) 3"
+
+*% === Device Capabilities =========================
+*LanguageLevel:         "3"
+
+*ColorDevice:           False
+*DefaultColorSpace:     Gray
+
+*Protocols:             TBCP
+
+*ScreenFreq:            "106.0"
+*ScreenAngle:           "45.0"
+*DefaultScreenProc:     Dot
+*ScreenProc Dot:        "{180 mul cos exch 180 mul cos add 2 div}"
+*ScreenProc Line:       "{ pop }"
+*ScreenProc Ellipse:    "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub }"
+
+*Throughput:            "50"
+
+*% === Begin Interpreter Header Common  ============
+*SuggestedJobTimeout:   "0"
+*SuggestedWaitTimeout:  "300"
+*RequiresPageRegion All: True
+*DefaultTransfer:       Null
+*Transfer Null:         "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+
+*% === Begin Interpreter Header Functions ==========
+*TTRasterizer: Type42
+*?TTRasterizer: "
+  save
+  42 /FontType resourcestatus
+  { pop pop (Type42)} {pop pop (None)} ifelse = flush
+  restore"
+*End
+
+*FileSystem: True
+*?FileSystem: "
+save
+  statusdict /diskonline get exec {(True)}{(False)} ifelse = flush
+restore
+"
+*End
+
+*Password: "0"
+
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING : Cannot perform the exitserver command.) =
+     (Password supplied is not valid.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+
+*Reset: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+ systemdict /quit get exec
+ (WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+*% === Begin Custom Header Function ============
+*FreeVM:                  "7168000"
+
+*DefaultVMOption:         128MB
+*VMOption 128MB/128 MB:   "7168000"
+*VMOption 256MB/256 MB:   "7168000"
+*VMOption 512MB/512 MB:   "7168000"
+*VMOption 1024MB/1024 MB: "7168000"
+
+*AcceptsTrueType:        True
+*PrintPSErrors:          True
+*AccurateScreensSupport: True
+
+*%---------------------------------------------------------
+*%-----------   Installable Oprions Group   ---------------
+*%---------------------------------------------------------
+*OpenGroup: InstallableOptions/Installable Options
+
+*% === Model ====================================
+*OpenUI *Model/Model: PickOne
+*DefaultModel: 5020i
+*Model 5020i/5020i: ""
+*Model 5000i/5000i: ""
+*Model 4020i/4020i: ""
+*Model 4000i/4000i: ""
+*CloseUI: *Model
+
+*% === Paper Source Unit ========================
+*OpenUI *PaperSourceUnit/Kaðýt Kaynaðý Ünitesi: PickOne
+*DefaultPaperSourceUnit: None
+*PaperSourceUnit None/Hiçbiri: ""
+*PaperSourceUnit Unit2/Ünite 2: ""
+*PaperSourceUnit Unit3/Ünite 3: ""
+*PaperSourceUnit Unit4/Ünite 4: ""
+*CloseUI: *PaperSourceUnit
+
+*CloseGroup: InstallableOptions
+
+*%---------------------------------------------------------
+*%-----------   OS Supported UI Group   -------------------
+*%---------------------------------------------------------
+
+*% === Input Slot ===============================
+*OpenUI *InputSlot/Input Slot: PickOne
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: AutoSelect
+*InputSlot AutoSelect/Otomatik olarak seç: "<</ManualFeed false /BRTraysw true >> setpagedevice"
+*InputSlot Tray1/Tepsi1: "<</ManualFeed false /BRTraysw false /BRFeeder 0>> setpagedevice"
+*InputSlot Tray2/Tepsi2: "<</ManualFeed false /BRTraysw false /BRFeeder 1>> setpagedevice"
+*InputSlot Tray3/Tepsi3: "<</ManualFeed false /BRTraysw false /BRFeeder 2>> setpagedevice"
+*InputSlot Tray4/Tepsi4: "<</ManualFeed false /BRTraysw false /BRFeeder 3>> setpagedevice"
+*InputSlot MPTray/Çok Amaçlý Besleyici: "<</ManualFeed false /BRTraysw false /BRFeeder 4>> setpagedevice"
+*CloseUI: *InputSlot
+
+*%---------------------------------------------------------
+*%-----------   Paper Group   -----------------------------
+*%---------------------------------------------------------
+
+*%==== PageSize ======================================
+*OpenUI *PageSize/Kaðýt Ebadý: PickOne
+*OrderDependency: 30 AnySetup *PageSize
+*DefaultPageSize: 8.5x11
+*PageSize A4JIS/A4:			"<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageSize A5/A5:			"<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageSize A5L/A5(Uzun Kenar):	"<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*PageSize A6/A6:			"<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageSize B5/B5(JIS):			"<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageSize B5ISO/B5(ISO):			"<</PageSize[499 709]/ImagingBBox null>>setpagedevice"
+*PageSize 8.5x14/Legal:			"<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageSize Mexico/Mexico Legal:			"<</PageSize[612 963]/ImagingBBox null>>setpagedevice"
+*PageSize IndiaLegal/India Legal:			"<</PageSize[609 978]/ImagingBBox null>>setpagedevice"
+*PageSize 8.5x13/Folio: 	"<</PageSize[612 936]/ImagingBBox null>>setpagedevice"
+*PageSize 8.5x11/Letter:		"<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageSize 7.25x10.5/Executive: 		"<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageSize 184x260/16K(184x260mm): 	"<</PageSize[522 737]/ImagingBBox null>>setpagedevice"
+*PageSize 195x270/16K(195x270mm): 	"<</PageSize[553 765]/ImagingBBox null>>setpagedevice"
+*PageSize 197x273/16K(197x273mm): 	"<</PageSize[558 774]/ImagingBBox null>>setpagedevice"
+*PageSize JPostcard/Kartpostal (Hagaki):		"<</PageSize[284 419]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeCom10/Com-10:			"<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeMonarch/Monarch:		"<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeDL/DL:			"<</PageSize[312 624]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeC5/C5:			"<</PageSize[459 649]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeYou4/Zarf Youkei4:		"<</PageSize[298 666]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeChou3/Chokei 3 Envelope: 	"<</PageSize[340 666]/ImagingBBox null>>setpagedevice"
+*PageSize EnvelopeChou4/Chokei 4 Envelope: 	"<</PageSize[255 581]/ImagingBBox null>>setpagedevice"
+*PageSize 3x5in/3"x5":			"<</PageSize[216 360]/ImagingBBox null>>setpagedevice"
+*PageSize A4Short/270mm Kaðýt:      	"<</PageSize[595 765]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*NonUIOrderDependency: 40 AnySetup *CustomPageSize
+*VariablePaperSize: True
+*LeadingEdge Short: ""
+*LeadingEdge Long: ""
+*DefaultLeadingEdge: Short
+*MaxMediaWidth: "612.283"
+*MaxMediaHeight: "1008.2835"
+*HWMargins: 12 12 12 12
+*CustomPageSize True: "
+	<</BRCustomPageSize true>> setpagedevice 
+	exch pop exch pop 0 eq{exch}if 
+	<< /PageSize [ 5 -2 roll ] /ImagingBBox null >> 
+	setpagedevice 
+"
+*End
+*ParamCustomPageSize Width: 1 points 197.8583 612.283
+*ParamCustomPageSize Height: 2 points 360 1008.2835
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 3
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 45 AnySetup *PageRegion
+*DefaultPageRegion: 8.5x11
+*PageRegion A4JIS/A4:			"<</PageSize[595 842]/ImagingBBox null>>setpagedevice"
+*PageRegion A5/A5:			"<</PageSize[420 595]/ImagingBBox null>>setpagedevice"
+*PageRegion A5L/A5(Uzun Kenar):	"<</PageSize[595 420]/ImagingBBox null>>setpagedevice"
+*PageRegion A6/A6:			"<</PageSize[297 420]/ImagingBBox null>>setpagedevice"
+*PageRegion B5/B5(JIS):			"<</PageSize[516 729]/ImagingBBox null>>setpagedevice"
+*PageRegion B5ISO/B5(ISO):			"<</PageSize[499 709]/ImagingBBox null>>setpagedevice"
+*PageRegion 8.5x14/Legal:		"<</PageSize[612 1008]/ImagingBBox null>>setpagedevice"
+*PageRegion Mexico/Mexico Legal:			"<</PageSize[612 963]/ImagingBBox null>>setpagedevice"
+*PageRegion IndiaLegal/India Legal:			"<</PageSize[609 978]/ImagingBBox null>>setpagedevice"
+*PageRegion 8.5x13/Folio:	"<</PageSize[612 936]/ImagingBBox null>>setpagedevice"
+*PageRegion 8.5x11/Letter:		"<</PageSize[612 792]/ImagingBBox null>>setpagedevice"
+*PageRegion 7.25x10.5/Executive:	"<</PageSize[522 756]/ImagingBBox null>>setpagedevice"
+*PageRegion 184x260/16K(184x260mm):	"<</PageSize[522 737]/ImagingBBox null>>setpagedevice"
+*PageRegion 195x270/16K(195x270mm):	"<</PageSize[553 765]/ImagingBBox null>>setpagedevice"
+*PageRegion 197x273/16K(197x273mm):	"<</PageSize[558 774]/ImagingBBox null>>setpagedevice"
+*PageRegion JPostcard/Kartpostal (Hagaki):		"<</PageSize[284 419]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeCom10/Com-10:		"<</PageSize[297 684]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeMonarch/Monarch:		"<</PageSize[279 540]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeDL/DL:			"<</PageSize[312 624]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeC5/C5:			"<</PageSize[459 649]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeYou4/Zarf Youkei4:	"<</PageSize[298 666]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeChou3/Chokei 3 Envelope: 	"<</PageSize[340 666]/ImagingBBox null>>setpagedevice"
+*PageRegion EnvelopeChou4/Chokei 4 Envelope: 	"<</PageSize[255 581]/ImagingBBox null>>setpagedevice"
+*PageRegion 3x5in/3"x5":			"<</PageSize[216 360]/ImagingBBox null>>setpagedevice"
+*PageRegion A4Short/270mm Kaðýt:	"<</PageSize[595 765]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: 8.5x11
+*ImageableArea A4JIS/A4:				"12 12 583 830"
+*ImageableArea A5/A5:				"12 12 408 583"
+*ImageableArea A5L/A5(Uzun Kenar):		"12 12 583 408"
+*ImageableArea A6/A6:				"12 12 285 408"
+*ImageableArea B5/B5(JIS):			"12 12 504 717"
+*ImageableArea B5ISO/B5(ISO):			"12 12 487 697"
+*ImageableArea 8.5x14/Legal:			"12 12 600 996"
+*ImageableArea Mexico/Mexico Legal:			"12 12 600 951"
+*ImageableArea IndiaLegal/India Legal:			"12 12 597 966"
+*ImageableArea 8.5x13/Folio:	"12 12 600 924"
+*ImageableArea 8.5x11/Letter:			"12 12 600 780"
+*ImageableArea 7.25x10.5/Executive:		"12 12 510 744"
+*ImageableArea 184x260/16K(184x260mm):	"12 12 510 725"
+*ImageableArea 195x270/16K(195x270mm):	"12 12 541 753"
+*ImageableArea 197x273/16K(197x273mm):	"12 12 546 762"
+*ImageableArea JPostcard/Kartpostal (Hagaki):			"12 12 272 407"
+*ImageableArea EnvelopeCom10/Com-10:			"12 12 285 672"
+*ImageableArea EnvelopeMonarch/Monarch:		"12 12 267 528"
+*ImageableArea EnvelopeDL/DL:			"12 12 300 612"
+*ImageableArea EnvelopeC5/C5:			"12 12 447 637"
+*ImageableArea EnvelopeYou4/Zarf Youkei4:		"12 12 286 654"
+*ImageableArea EnvelopeChou3/Chokei 3 Envelope: 		"12 12 328 654"
+*ImageableArea EnvelopeChou4/Chokei 4 Envelope: 		"12 12 243 569"
+*ImageableArea 3x5in/3"x5":			"12 12 204 348"
+*ImageableArea A4Short/270mm Kaðýt:		"12 12 583 753"
+
+*DefaultPaperDimension: 8.5x11
+*PaperDimension A4JIS/A4:				"595 842"
+*PaperDimension A5/A5:				"420 595"
+*PaperDimension A5L/A5(Uzun Kenar):		"595 420"
+*PaperDimension A6/A6:				"297 420"
+*PaperDimension B5/B5(JIS):			"515 727"
+*PaperDimension B5ISO/B5(ISO):			"499 709"
+*PaperDimension 8.5x14/Legal:			"612 1008"
+*PaperDimension Mexico/Mexico Legal:			"612 963"
+*PaperDimension IndiaLegal/India Legal:			"609 978"
+*PaperDimension 8.5x13/Folio:	"612 936"
+*PaperDimension 8.5x11/Letter:			"612 792"
+*PaperDimension 7.25x10.5/Executive:		"522 756"
+*PaperDimension 184x260/16K(184x260mm):	"522 737"
+*PaperDimension 195x270/16K(195x270mm):	"553 765"
+*PaperDimension 197x273/16K(197x273mm):	"558 774"
+*PaperDimension JPostcard/Kartpostal (Hagaki):		"284 419"
+*PaperDimension EnvelopeCom10/Com-10:			"297 684"
+*PaperDimension EnvelopeMonarch/Monarch:		"279 540"
+*PaperDimension EnvelopeDL/DL:			"312 624"
+*PaperDimension EnvelopeC5/C5:			"459 649"
+*PaperDimension EnvelopeYou4/Zarf Youkei4:		"298 666"
+*PaperDimension EnvelopeChou3/Chokei 3 Envelope: 		"340 666"
+*PaperDimension EnvelopeChou4/Chokei 4 Envelope: 		"255 581"
+*PaperDimension 3x5in/3"x5":			"216 360"
+*PaperDimension A4Short/270mm Kaðýt:	"595 765"
+
+*%---------------------------------------------------------
+*%-----------   Printer Features Group   ------------------
+*%---------------------------------------------------------
+
+*OpenGroup: KMPrinterFeatures/Basic
+
+*%==== Duplex ======================================
+*OpenUI *Duplex/Dubleks Opsiyonlarý: PickOne
+*OrderDependency: 25 AnySetup *Duplex
+*DefaultDuplex: DuplexNoTumble
+*Duplex DuplexTumble/Kýsa Kenar: "<</Duplex true /Tumble true>>setpagedevice"
+*Duplex DuplexNoTumble/Uzun Kenar: "<</Duplex true /Tumble false>>setpagedevice"
+*Duplex None/Tek Yön: "<</Duplex false /Tumble false>>setpagedevice"
+*CloseUI: *Duplex
+
+*%==== MediaType =====================================
+*OpenUI *BRMediaType/Kaðýt Tipi:  PickOne
+*OrderDependency: 50 AnySetup *BRMediaType
+*DefaultBRMediaType: Plain
+*BRMediaType Plain/Normal Kaðýt: "<</MediaType (REGULAR)>>setpagedevice"
+*BRMediaType Env/Zarf: "<</MediaType (ENVELOPES)>>setpagedevice"
+*BRMediaType EnvThick/Kalýn Zarf: "<</MediaType (ENVTHICK)>>setpagedevice"
+*BRMediaType EnvThin/Ýnce Zarf: "<</MediaType (ENVTHIN)>>setpagedevice"
+*BRMediaType Letterhead/Antetli Kaðýt: "<</MediaType (LETTERHEAD)>>setpagedevice"
+*BRMediaType PostCard/Kartpostal (Hagaki): "<</MediaType (POSTCARD)>>setpagedevice"
+*BRMediaType Thick/Kalýn: "<</MediaType (THICK)>>setpagedevice"
+*BRMediaType ThickPaper2/Daha kalýn: "<</MediaType (THICK2)>>setpagedevice"
+*BRMediaType Thin/Ýnce: "<</MediaType (THIN)>>setpagedevice"
+*BRMediaType BOND/Izbušeni papir: "<</MediaType (BOND)>>setpagedevice"
+*BRMediaType Label/Etiket: "<</MediaType (LABEL)>>setpagedevice"
+*BRMediaType ColoredPaper/Renkli Kaðýt: "<</MediaType (COLOR)>>setpagedevice"
+*BRMediaType Recycled/geri dönüþümlü kaðýt: "<</MediaType (RECYCLED)>>setpagedevice"
+*CloseUI: *BRMediaType
+
+*CloseGroup: KMPrinterFeatures
+
+*%---------------------------------------------------------
+*%-----------   Quality UI Group   ------------------------
+*%---------------------------------------------------------
+
+*OpenGroup: KMPrinterFeaturesQuality/Quality
+
+*%==== Resolution ====================================
+*OpenUI *Resolution/Çözünürlük: PickOne
+*OrderDependency: 70 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 300dpi/300 dpi: "<</HWResolution [300 300] >> setpagedevice"
+*Resolution	600dpi/600 dpi: "<</HWResolution [600 600] >> setpagedevice"
+*Resolution	2400x600dpi/HQ 1200: "<</HWResolution [1200 1200] >> setpagedevice
+statusdict/true1200 known{statusdict begin false true1200 end}if
+"
+*Resolution	1200dpi/1200 dpi: "<</HWResolution [1200 1200] >> setpagedevice 
+statusdict/true1200 known{statusdict begin true true1200 end}if
+"
+*CloseUI: *Resolution
+
+*CloseGroup: KMPrinterFeaturesQuality
+
+*%---------------------------------------------------------
+*%-----------   Color UI Group   --------------------------
+*%---------------------------------------------------------
+
+*OpenGroup: KMPrinterFeaturesToner/Toner
+
+*% Toner Save ===============
+*OpenUI *TonerSaveMode/Toner Tasarrufu: Boolean
+*DefaultTonerSaveMode: False
+*OrderDependency: 10 AnySetup  *TonerSaveMode
+*TonerSaveMode False/Kapat: "
+	statusdict/tonersave known{statusdict begin false tonersave end}if
+"
+*End
+*TonerSaveMode True/Aç: "
+	statusdict/tonersave known{statusdict begin true tonersave end}if
+"
+*End
+*CloseUI: *TonerSaveMode
+
+*CloseGroup: KMPrinterFeaturesToner
+
+*%---------------------------------------------------------
+*%-----------   Secure Print Group   ----------------------
+*%---------------------------------------------------------
+
+*OpenGroup: BRJobHoldG/Confidential Print
+
+*OpenUI *BRPassword/Gizli baský: PickOne
+*OrderDependency: 33 AnySetup *BRPassword
+*DefaultBRPassword: False
+*BRPassword False/Kapat: "<</BRHold 0>>setpagedevice"
+*BRPassword 1122: "<</BRHold 2 /BRHoldType 1/BRHoldKey 1122>> setpagedevice"
+*BRPassword 8519: "<</BRHold 2 /BRHoldType 1/BRHoldKey 8519>> setpagedevice"
+*BRPassword 3956: "<</BRHold 2 /BRHoldType 1/BRHoldKey 3956>> setpagedevice"
+*BRPassword 2186: "<</BRHold 2 /BRHoldType 1/BRHoldKey 2186>> setpagedevice"
+*BRPassword 3315: "<</BRHold 2 /BRHoldType 1/BRHoldKey 3315>> setpagedevice"
+*BRPassword 0896: "<</BRHold 2 /BRHoldType 1/BRHoldKey 0896>> setpagedevice"
+*CloseUI: *BRPassword
+
+*CloseGroup: BRJobHoldG
+
+*%---------------------------------------------------------
+*%-----------   User Constraints   ------------------------
+*%---------------------------------------------------------
+*UIConstraints:	*Model	5020i *PaperSourceUnit	Unit4
+*UIConstraints:	*Model	4020i	*PaperSourceUnit	Unit4
+*UIConstraints:	*Model	4000i *PaperSourceUnit	Unit4
+*UIConstraints:	*PaperSourceUnit	Unit4 *Model	5020i
+*UIConstraints:	*PaperSourceUnit	Unit4	*Model	4020i
+*UIConstraints:	*PaperSourceUnit	Unit4 *Model	4000i
+*UIConstraints:	*PaperSourceUnit  None	*InputSlot	Tray2
+*UIConstraints:	*PaperSourceUnit	None	*InputSlot	Tray3
+*UIConstraints:	*PaperSourceUnit	None	*InputSlot	Tray4
+*UIConstraints:	*PaperSourceUnit	Unit2	*InputSlot	Tray3
+*UIConstraints:	*PaperSourceUnit	Unit2	*InputSlot	Tray4
+*UIConstraints:	*PaperSourceUnit	Unit3	*InputSlot	Tray4
+*UIConstraints:	*PageSize A5	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	A5	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	A5L	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	A5L	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	A6	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	A6	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	B5	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	B5	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	B5ISO	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	B5ISO	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	7.25x10.5	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	7.25x10.5	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	184x260	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	184x260	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	195x270	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	195x270	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	197x273	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	197x273	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	JPostcard	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	JPostcard	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeCom10	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeCom10	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeMonarch	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeMonarch	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeDL	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeDL	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeC5	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeC5	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeYou4	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeYou4	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeChou3	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeChou3	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	EnvelopeChou4	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	EnvelopeChou4	*Duplex	DuplexNoTumble
+*UIConstraints:	*PageSize	3x5in	*Duplex	DuplexTumble
+*UIConstraints:	*PageSize	3x5in	*Duplex	DuplexNoTumble
+*UIConstraints:	*CustomPageSize	True	*Duplex	DuplexTumble
+*UIConstraints:	*CustomPageSize	True	*Duplex DuplexNoTumble
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	A5
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	A5L
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	A6
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	B5
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	B5ISO
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	7.25x10.5
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	184x260
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	195x270
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	197x273
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	JPostcard
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeCom10
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeMonarch
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeDL
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeC5
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeYou4
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeChou3
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	EnvelopeChou4
+*UIConstraints:	*Duplex	DuplexTumble	*PageSize	3x5in
+*UIConstraints:	*Duplex	DuplexTumble	*CustomPageSize True
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	A5
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	A5L
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	A6
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	B5
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	B5ISO
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	7.25x10.5
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	184x260
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	195x270
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	197x273
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	JPostcard
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeCom10
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeMonarch
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeDL
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeC5
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeYou4
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeChou3
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	EnvelopeChou4
+*UIConstraints:	*Duplex	DuplexNoTumble	*PageSize	3x5in
+*UIConstraints:	*Duplex	DuplexNoTumble	*CustomPageSize True
+*UIConstraints:	*InputSlot	Tray2	*PaperSourceUnit  None
+*UIConstraints:	*InputSlot	Tray3	*PaperSourceUnit  None
+*UIConstraints:	*InputSlot	Tray3	*PaperSourceUnit  Unit2
+*UIConstraints:	*InputSlot	Tray4	*PaperSourceUnit  None
+*UIConstraints:	*InputSlot	Tray4	*PaperSourceUnit  Unit2
+*UIConstraints:	*InputSlot	Tray4	*PaperSourceUnit  Unit3
+*UIConstraints:	*InputSlot	Tray1	*BRMediaType	Env
+*UIConstraints:	*InputSlot	Tray1	*BRMediaType	EnvThick
+*UIConstraints:	*InputSlot	Tray1	*BRMediaType	EnvThin
+*UIConstraints:	*InputSlot	Tray1	*BRMediaType	ThickPaper2
+*UIConstraints:	*InputSlot	Tray1	*BRMediaType	BOND
+*UIConstraints:	*InputSlot	Tray1	*BRMediaType	Label
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	Env
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	EnvThick
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	EnvThin
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	PostCard
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	ThickPaper2
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	BOND
+*UIConstraints:	*InputSlot	Tray2	*BRMediaType	Label
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	Env
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	EnvThick
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	EnvThin
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	PostCard
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	ThickPaper2
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	BOND
+*UIConstraints:	*InputSlot	Tray3	*BRMediaType	Label
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	Env
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	EnvThick
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	EnvThin
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	PostCard
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	ThickPaper2
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	BOND
+*UIConstraints:	*InputSlot	Tray4	*BRMediaType	Label
+*UIConstraints:	*BRMediaType	Env	*InputSlot	Tray1
+*UIConstraints:	*BRMediaType	Env	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	Env	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	Env	*InputSlot	Tray4
+*UIConstraints:	*BRMediaType	EnvThick	*InputSlot	Tray1
+*UIConstraints:	*BRMediaType	EnvThick	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	EnvThick	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	EnvThick	*InputSlot	Tray4
+*UIConstraints:	*BRMediaType	EnvThin	*InputSlot	Tray1
+*UIConstraints:	*BRMediaType	EnvThin	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	EnvThin	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	EnvThin	*InputSlot	Tray4
+*UIConstraints:	*BRMediaType	PostCard	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	PostCard	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	PostCard	*InputSlot	Tray4
+*UIConstraints:	*BRMediaType	ThickPaper2	*InputSlot	Tray1
+*UIConstraints:	*BRMediaType	ThickPaper2	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	ThickPaper2	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	ThickPaper2	*InputSlot	Tray4
+*UIConstraints:	*BRMediaType	BOND	*InputSlot	Tray1
+*UIConstraints:	*BRMediaType	BOND	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	BOND	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	BOND	*InputSlot	Tray4
+*UIConstraints:	*BRMediaType	Label	*InputSlot	Tray1
+*UIConstraints:	*BRMediaType	Label	*InputSlot	Tray2
+*UIConstraints:	*BRMediaType	Label	*InputSlot	Tray3
+*UIConstraints:	*BRMediaType	Label	*InputSlot	Tray4
+
+*%---------------------------------------------------------
+*%-----------   Font Information   ------------------------
+*%---------------------------------------------------------
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.000)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.000)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.000)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.000)" Standard ROM
+*Font Bookman-Demi: Standard "(001.000)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.000)" Standard ROM
+*Font Bookman-Light: Standard "(001.000)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.000)" Standard ROM
+*Font Courier: Standard "(001.000)" Standard ROM
+*Font Courier-Bold: Standard "(001.000)" Standard ROM
+*Font Courier-Oblique: Standard "(001.000)" Standard ROM
+*Font Courier-BoldOblique: Standard "(001.000)" Standard ROM
+*Font Helvetica: Standard "(001.000)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.000)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.000)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.000)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.000)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.000)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.000)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.000)" Standard ROM
+*Font Helvetica-Light: Standard "(001.000)" Standard ROM
+*Font Helvetica-LightOblique: Standard "(001.000)" Standard ROM
+*Font Helvetica-Black: Standard "(001.000)" Standard ROM
+*Font Helvetica-BlackOblique: Standard "(001.000)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.000)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.000)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.000)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.000)" Standard ROM
+*Font Palatino-Roman: Standard "(001.000)" Standard ROM
+*Font Palatino-Bold: Standard "(001.000)" Standard ROM
+*Font Palatino-Italic: Standard "(001.000)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.000)" Standard ROM
+*Font Symbol: Special "(001.000)" Standard ROM
+*Font Times-Roman: Standard "(001.000)" Standard ROM
+*Font Times-Bold: Standard "(001.000)" Standard ROM
+*Font Times-Italic: Standard "(001.000)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.000)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.000)" Standard ROM
+*Font ZapfDingbats: Special "(001.000)" Special ROM
+
+*% end of PPD

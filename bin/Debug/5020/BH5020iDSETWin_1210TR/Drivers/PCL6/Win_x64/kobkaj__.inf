@@ -1,0 +1,128 @@
+;
+; KONICA MINOLTA 5020iSeries PCL Driver INF-File for Win x64
+;
+; Copyright (C) 2019 KONICA MINOLTA, INC.
+;
+
+[Version]
+Signature="$Windows NT$"
+Provider=%KM%
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+DriverIsolation=2
+CatalogFile=KOBKAJ__.cat
+DriverVer=02/12/2019,1.1.1.0
+
+[Manufacturer]
+%KM%=KONICA MINOLTA,NTamd64,NTamd64.6.0
+
+[KONICA MINOLTA.NTamd64]
+"KONICA MINOLTA 5020i PCL" = KOBKAJ_G.dll.NTamd64, USBPRINT\KONICA_MINOLTAbizhub7925, KONICA_MINOLTAbizhub7925
+"KONICA MINOLTA 5000i PCL" = KOBKAJ_G.dll.NTamd64, USBPRINT\KONICA_MINOLTAbizhubB984, KONICA_MINOLTAbizhubB984
+"KONICA MINOLTA 4020i PCL" = KOBKAJ_G.dll.NTamd64, USBPRINT\KONICA_MINOLTAbizhubB918, KONICA_MINOLTAbizhubB918
+"KONICA MINOLTA 4000i PCL" = KOBKAJ_G.dll.NTamd64, USBPRINT\KONICA_MINOLTAbizhub79B9, KONICA_MINOLTAbizhub79B9
+
+[KONICA MINOLTA.NTamd64.6.0]
+"KONICA MINOLTA 5020i PCL" = KOBKAJ_G.5020i.NTamd64.6.0, USBPRINT\KONICA_MINOLTAbizhub7925, KONICA_MINOLTAbizhub7925
+"KONICA MINOLTA 5000i PCL" = KOBKAJ_G.5000i.NTamd64.6.0, USBPRINT\KONICA_MINOLTAbizhubB984, KONICA_MINOLTAbizhubB984
+"KONICA MINOLTA 4020i PCL" = KOBKAJ_G.4020i.NTamd64.6.0, USBPRINT\KONICA_MINOLTAbizhubB918, KONICA_MINOLTAbizhubB918
+"KONICA MINOLTA 4000i PCL" = KOBKAJ_G.4000i.NTamd64.6.0, USBPRINT\KONICA_MINOLTAbizhub79B9, KONICA_MINOLTAbizhub79B9
+
+[KOBKAJ_G.DLL.NTamd64]
+CopyFiles=KOBKA_COPY,PRINT_MONITOR
+DataSection=KOBKA_DATA
+HelpFile=KOBKAJ__.chm
+
+[KOBKAJ_G.5020i.NTamd64.6.0]
+CopyFiles=KOBKA_COPY,PRINT_MONITOR
+DataSection=KOBKA_DATA
+LanguageMonitor="5020i PCL Language Monitor,KOBKAJ_L.dll"
+HelpFile=KOBKAJ__.chm
+
+[KOBKAJ_G.5000i.NTamd64.6.0]
+CopyFiles=KOBKA_COPY,PRINT_MONITOR
+DataSection=KOBKA_DATA
+LanguageMonitor="5000i PCL Language Monitor,KOBKAJ_L.dll"
+HelpFile=KOBKAJ__.chm
+
+[KOBKAJ_G.4020i.NTamd64.6.0]
+CopyFiles=KOBKA_COPY,PRINT_MONITOR
+DataSection=KOBKA_DATA
+LanguageMonitor="4020i PCL Language Monitor,KOBKAJ_L.dll"
+HelpFile=KOBKAJ__.chm
+
+[KOBKAJ_G.4000i.NTamd64.6.0]
+CopyFiles=KOBKA_COPY,PRINT_MONITOR
+DataSection=KOBKA_DATA
+LanguageMonitor="4000i PCL Language Monitor,KOBKAJ_L.dll"
+HelpFile=KOBKAJ__.chm
+
+[PrinterPackageInstallation.amd64]
+PackageAware=TRUE
+
+[KOBKA_COPY]
+KOBKAJ_G.dll
+KOBKAJ_X.dll
+KOBKAJ_F.dll
+KOBKAJ_C.dll
+KOBKAJ_U.dll
+KOBKAJ_S.dll
+KOBKAJ_R.dll
+KOBKAJ_J.dll
+KOBKAJ_D.dll
+KOBKAJ_W.dll
+KOBKAJ_C.kpd
+KOBKAJ_D.kpd
+KOBKAJ_M.kpd
+KOBKAJ__.kpd
+KOBKAJ__.chm
+KOBKAJ__.unf
+KOBKAJ_A.kmp
+KOBKAJ_B.kmp
+KOBKAJ_C.kmp
+KOBKAJ_D.kmp
+
+[KOBKA_DATA]
+DriverFile=KOBKAJ_G.dll
+ConfigFile=KOBKAJ_C.dll
+DataFile=KOBKAJ_G.dll
+
+[PRINT_MONITOR]
+KOBKAJ_L.dll
+
+[DestinationDirs]
+DefaultDestDir=66000
+PRINT_MONITOR=66002
+
+[SourceDisksNames.amd64]
+9=%DiskName%,,
+
+[SourceDisksFiles.amd64]
+KOBKAJ_G.dll = 9
+KOBKAJ_X.dll = 9
+KOBKAJ_F.dll = 9
+KOBKAJ_C.dll = 9
+KOBKAJ_U.dll = 9
+KOBKAJ_S.dll = 9
+KOBKAJ_R.dll = 9
+KOBKAJ_J.dll = 9
+KOBKAJ_D.dll = 9
+KOBKAJ_W.dll = 9
+KOBKAJ_L.dll = 9
+KOBKAJ_C.kpd = 9
+KOBKAJ_D.kpd = 9
+KOBKAJ_M.kpd = 9
+KOBKAJ__.kpd = 9
+KOBKAJ__.chm = 9
+KOBKAJ__.unf = 9
+KOBKAJ_A.kmp = 9
+KOBKAJ_B.kmp = 9
+KOBKAJ_C.kmp = 9
+KOBKAJ_D.kmp = 9
+
+[OEM URLS]
+%KM%="http://konicaminolta.com/"
+
+[Strings]
+KM="KONICA MINOLTA"
+DiskName="KONICA MINOLTA 5020iSeries Driver Disk"
