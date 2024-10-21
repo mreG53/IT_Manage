@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\DEV\\Enka_IT_Management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\callitform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:callitform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\installprinterdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:installprinterdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\installprinterdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:installprinterdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\resetprinters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:resetprinters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\resetprinters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:resetprinters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|C:\\DEV\\Enka_IT_Management\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|c:\\dev\\enka_it_management\\start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{05764E06-4B9B-47A6-B816-081C97B31294}|Enka_IT_Management.csproj|solutionrelative:start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 372,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,62 +58,116 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CallItForm.Designer.cs",
-              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.Designer.cs",
-              "RelativeDocumentMoniker": "CallItForm.Designer.cs",
-              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.Designer.cs",
-              "RelativeToolTip": "CallItForm.Designer.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAnwF4AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T11:50:34.033Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CallItForm.cs",
-              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
-              "RelativeDocumentMoniker": "CallItForm.cs",
-              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
-              "RelativeToolTip": "CallItForm.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAnwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T11:50:27.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CallItForm.cs [Design]",
-              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
-              "RelativeDocumentMoniker": "CallItForm.cs",
-              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs [Design]",
-              "RelativeToolTip": "CallItForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T11:48:21.981Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Start.cs",
               "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\Start.cs",
               "RelativeDocumentMoniker": "Start.cs",
               "ToolTip": "C:\\DEV\\Enka_IT_Management\\Start.cs",
               "RelativeToolTip": "Start.cs",
-              "ViewState": "AQIAAI4AAAAAAAAAAAAUwDIEAAABAAAA",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAnwJcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T12:05:38.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPrinters.cs [Design]",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\ResetPrinters.cs",
+              "RelativeDocumentMoniker": "ResetPrinters.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\ResetPrinters.cs [Design]",
+              "RelativeToolTip": "ResetPrinters.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:28:46.708Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ResetPrinters.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\ResetPrinters.cs",
+              "RelativeDocumentMoniker": "ResetPrinters.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\ResetPrinters.cs",
+              "RelativeToolTip": "ResetPrinters.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAnwEkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:28:50.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InstallPrinterDrivers.cs [Design]",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\InstallPrinterDrivers.cs",
+              "RelativeDocumentMoniker": "InstallPrinterDrivers.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\InstallPrinterDrivers.cs [Design]",
+              "RelativeToolTip": "InstallPrinterDrivers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:28:56.235Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InstallPrinterDrivers.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\InstallPrinterDrivers.cs",
+              "RelativeDocumentMoniker": "InstallPrinterDrivers.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\InstallPrinterDrivers.cs",
+              "RelativeToolTip": "InstallPrinterDrivers.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAnwD4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:28:59.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DatabaseHelper.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\DatabaseHelper.cs",
+              "RelativeToolTip": "DatabaseHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:29:07.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CallItForm.cs [Design]",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
+              "RelativeDocumentMoniker": "CallItForm.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs [Design]",
+              "RelativeToolTip": "CallItForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:29:18.305Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CallItForm.cs",
+              "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
+              "RelativeDocumentMoniker": "CallItForm.cs",
+              "ToolTip": "C:\\DEV\\Enka_IT_Management\\CallItForm.cs",
+              "RelativeToolTip": "CallItForm.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAnwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T19:29:20.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Start.cs [Design]",
               "DocumentMoniker": "C:\\DEV\\Enka_IT_Management\\Start.cs",
               "RelativeDocumentMoniker": "Start.cs",
               "ToolTip": "C:\\DEV\\Enka_IT_Management\\Start.cs [Design]",
               "RelativeToolTip": "Start.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T12:05:37.157Z"
+              "WhenOpened": "2024-10-21T19:29:50.503Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

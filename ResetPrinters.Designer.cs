@@ -98,6 +98,7 @@
             this.Name = "ResetPrinters";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yazıcı Sırasını Sıfırla (Devre Dışı)";
+            this.Load += new System.EventHandler(this.ResetPrinters_Load);
             this.ResumeLayout(false);
 
         }

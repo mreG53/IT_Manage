@@ -127,9 +127,9 @@
             this.btn_wifi_connect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_wifi_connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_wifi_connect.ForeColor = System.Drawing.Color.White;
-            this.btn_wifi_connect.Location = new System.Drawing.Point(266, 186);
+            this.btn_wifi_connect.Location = new System.Drawing.Point(266, 187);
             this.btn_wifi_connect.Name = "btn_wifi_connect";
-            this.btn_wifi_connect.Size = new System.Drawing.Size(236, 69);
+            this.btn_wifi_connect.Size = new System.Drawing.Size(236, 68);
             this.btn_wifi_connect.TabIndex = 17;
             this.btn_wifi_connect.Text = "Bağlantı problemini çöz - Wi-Fi";
             this.btn_wifi_connect.UseVisualStyleBackColor = false;
@@ -392,7 +392,7 @@
             this.versionname.AutoSize = true;
             this.versionname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.versionname.ForeColor = System.Drawing.Color.Blue;
-            this.versionname.Location = new System.Drawing.Point(976, -1);
+            this.versionname.Location = new System.Drawing.Point(976, -2);
             this.versionname.Name = "versionname";
             this.versionname.Size = new System.Drawing.Size(28, 13);
             this.versionname.TabIndex = 28;

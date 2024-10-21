@@ -8,7 +8,7 @@ namespace Enka_IT_Management
     {
         public static void InsertLogToDatabase(string desktopName, string localIp, string process, string name, string cpu, string ram, string disk, string availableDisk)
         {
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
 
             try
             {

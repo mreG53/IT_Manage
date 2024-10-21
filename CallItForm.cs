@@ -24,7 +24,6 @@ namespace Enka_IT_Management
 
         private void CallItForm_Load(object sender, EventArgs e)
         {
-            // Kullanıcı adını form yüklendiğinde label içine yazdırıyoruz
             lbl_db_name.Text = UserName;
         }
 
@@ -65,8 +64,7 @@ namespace Enka_IT_Management
 
         private void InsertCallItRecord(string name, string reason, bool read, string imagePath = null)
         {
-            // SQL bağlantı cümlesi (kendi bilgilerinize göre düzenleyin)
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
 
             try
             {
@@ -74,21 +72,17 @@ namespace Enka_IT_Management
                 {
                     connection.Open();
 
-                    // SQL komutu oluşturuluyor, imagePath varsa ekleniyor
                     string query = "INSERT INTO dbo.callit (name, reason, date, [read], image) VALUES (@name, @reason, @date, @read, @image)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Parametreler ekleniyor
                         command.Parameters.AddWithValue("@name", name);
                         command.Parameters.AddWithValue("@reason", reason);
                         command.Parameters.AddWithValue("@date", DateTime.Now);
                         command.Parameters.AddWithValue("@read", read);
 
-                        // imagePath varsa ekleniyor, yoksa null geçiliyor
                         command.Parameters.AddWithValue("@image", (object)imagePath ?? DBNull.Value);
 
-                        // Komut çalıştırılıyor
                         command.ExecuteNonQuery();
                         MessageBox.Show("Yardım talebiniz alındı. Geri dönüş sağlanacaktır.");
                     }
@@ -102,7 +96,7 @@ namespace Enka_IT_Management
 
         private bool CanSubmitNewCall(string name)
         {
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
 
             try
             {
@@ -141,14 +135,12 @@ namespace Enka_IT_Management
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            // Eğer sebep 12 karakterden kısa ise uyarı veriyoruz
             if (txt_reason.Text.Trim().Length < 12)
             {
                 ShowTimedMessageBox("Lütfen 12 karakterden daha uzun bir sebep giriniz.", "Karakter Hatası", 3000);
             }
             else
             {
-                // Zaman kısıtlamasını kontrol ediyoruz
                 if (!CanSubmitNewCall(lbl_db_name.Text))
                 {
                     ShowTimedMessageBox("Son çağrıdan sonra 10 dakika geçmedi. Lütfen daha sonra tekrar deneyin.", "Zaman Kısıtlaması", 3000);
@@ -157,21 +149,17 @@ namespace Enka_IT_Management
 
                 try
                 {
-                    // Eğer resim seçilmişse ve yol boş değilse resmi sunucuya yüklüyoruz
                     if (!string.IsNullOrEmpty(selectedImagePath))
                     {
                         string serverFilePath = UploadImageToServer(selectedImagePath);
 
-                        // Resim ve sebebi veritabanına kaydediyoruz
                         InsertCallItRecord(lbl_db_name.Text, txt_reason.Text, false, serverFilePath);
                     }
                     else
                     {
-                        // Resim seçilmemişse sadece sebebi kaydediyoruz
                         InsertCallItRecord(lbl_db_name.Text, txt_reason.Text, false);
                     }
 
-                    // Formu kapatıyoruz
                     this.Close();
                 }
                 catch (Exception ex)
@@ -181,20 +169,18 @@ namespace Enka_IT_Management
             }
         }
 
-        private string selectedImagePath = ""; // Resmin dosya yolunu tutmak için bir değişken
+        private string selectedImagePath = "";
 
         private void btn_upload_image_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; // Sadece resim dosyalarını göster
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
                 openFileDialog.Title = "Bir resim seçin";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    selectedImagePath = openFileDialog.FileName; // Seçilen dosyanın tam yolu bellekte tutuluyor
-
-                    // Resmin adını lbl_image_name etiketine yazıyoruz
+                    selectedImagePath = openFileDialog.FileName;
                     lbl_image_name.Text = Path.GetFileName(selectedImagePath);
                 }
             }
@@ -223,18 +209,17 @@ namespace Enka_IT_Management
         {
             NETRESOURCE nr = new NETRESOURCE
             {
-                dwType = 1, // Disk tipi
-                lpLocalName = null, // Lokal harf kullanmak zorunda değiliz
-                lpRemoteName = networkPath, // Bağlanmak istediğimiz ağ yolu
+                dwType = 1,
+                lpLocalName = null,
+                lpRemoteName = networkPath,
                 lpProvider = null
             };
 
-            // Mevcut bağlantıyı kesiyoruz, aynı bağlantı var mı diye kontrol için
             WNetCancelConnection2(networkPath, 0, true);
 
             int result = WNetAddConnection2(ref nr, password, username, 0);
 
-            if (result != 0) // Eğer 0 değilse hata var demektir
+            if (result != 0)
             {
                 throw new Exception("Ağ bağlantısı başarısız oldu. Hata kodu: " + result);
             }
@@ -243,33 +228,33 @@ namespace Enka_IT_Management
         private string UploadImageToServer(string localImagePath)
         {
             string serverDirectory = @"\\192.168.10.8\C$\Users\administrator.ENKA\Desktop\qs_image\";
-            string username = @"enka\administrator";
-            string password = "Enk1987VHT.!";
+            string username = @"test";
+            string password = "test";
 
             string fileName = Path.GetFileName(localImagePath);
             string serverFilePath = Path.Combine(serverDirectory, fileName);
 
-            ConnectToNetworkDrive(serverDirectory, username, password); // Sunucuya bağlanma
+            ConnectToNetworkDrive(serverDirectory, username, password);
 
-            File.Copy(localImagePath, serverFilePath, true); // Dosyayı sunucuya kopyalama
+            File.Copy(localImagePath, serverFilePath, true);
 
-            return serverFilePath; // Kaydedilen dosya yolunu döndür
+            return serverFilePath;
         }
 
         private void SaveImageToDatabase(string serverFilePath)
         {
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string query = "UPDATE dbo.callit SET image = @imagePath WHERE name = @name"; // 'id' yerine doğru bir değer koyun
+                string query = "UPDATE dbo.callit SET image = @imagePath WHERE name = @name";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@imagePath", serverFilePath);
-                    command.Parameters.AddWithValue("@id", lbl_db_name.Text); // Kayıtla eşleşen 'id'yi ekleyin
+                    command.Parameters.AddWithValue("@id", lbl_db_name.Text);
 
                     command.ExecuteNonQuery();
                 }
@@ -278,9 +263,8 @@ namespace Enka_IT_Management
 
         private void lbl_resmi_sil_Click(object sender, EventArgs e)
         {
-            // Seçilen resim yolunu ve resmin adını sıfırla
             selectedImagePath = null;
-            lbl_image_name.Text = string.Empty; // Resim adı etiketi temizleniyor
+            lbl_image_name.Text = string.Empty;
         }
     }
 }

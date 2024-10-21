@@ -41,7 +41,7 @@
             // lbl_db_name
             // 
             this.lbl_db_name.AutoSize = true;
-            this.lbl_db_name.Location = new System.Drawing.Point(-23, 8);
+            this.lbl_db_name.Location = new System.Drawing.Point(-3, 8);
             this.lbl_db_name.Name = "lbl_db_name";
             this.lbl_db_name.Size = new System.Drawing.Size(35, 13);
             this.lbl_db_name.TabIndex = 0;

@@ -51,7 +51,29 @@ namespace Enka_IT_Management
         private void Start_Load(object sender, EventArgs e)
         {
             lbl_what_is_issue.Text = "Aşağıdaki butonlara tıklayarak, sorununuzu çözebilirsiniz. " +
-                "\nEğer sorununuz çözülmediyse \"BT Bildir\" butonuyla IT ekibine ticket açabilirsiniz.";
+    "\nEğer sorununuz çözülmediyse \"BT Bildir\" butonuyla IT ekibine ticket açabilirsiniz.";
+
+
+            string currentVersionText = versionname.Text.Replace("v", "").Trim();
+            string currentVersion = currentVersionText.Split('.')[0];
+
+            string databaseVersion = GetDatabaseVersion();
+
+            if (string.Compare(currentVersion, databaseVersion) < 0)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Yeni bir güncelleme mevcut! Güncellemek istiyorsanız 'Evet' butonuna tıklayın.",
+                    "Güncelleme Mevcut",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    StartUpdateProcess();
+                    return; // Güncelleme yapıldığından diğer işlemler devam etmez
+                }
+            }
 
             UpdateCpuUsage();
             Thread.Sleep(2000);
@@ -66,7 +88,6 @@ namespace Enka_IT_Management
             else
             {
                 ChangeStatusOnline();
-
                 Thread.Sleep(2000);
                 DatabaseHelper.InsertLogToDatabase(lbl_desktop_name.Text, lbl_local_ip_address.Text, "Kullanıcı giriş yaptı.", lbl_db_name.Text, lbl_cpu_for_db.Text, lbl_ram_for_db.Text, lbl_disk_for_db.Text, lbl_adisk_for_db.Text);
             }
@@ -95,6 +116,94 @@ namespace Enka_IT_Management
             }
         }
 
+        private string GetDatabaseVersion()
+        {
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
+            string version = "1";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT TOP 1 version FROM dbo.internal ORDER BY version DESC";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        object result = command.ExecuteScalar();
+                        if (result != null)
+                        {
+                            version = result.ToString().Split('.')[0]; // Sadece ana versiyonu al (ör. "1" kısmı)
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Veritabanı sürümü alınırken bir hata oluştu: " + ex.Message);
+            }
+
+            return version;
+        }
+
+        private async void StartUpdateProcess()
+        {
+            string networkPath = @"\\192.168.10.5\Ortak\uk\enkait";
+            string username = @"test";
+            string password = "test";
+
+            bool connected = ConnectToNetworkDrive(networkPath, username, password);
+            if (connected)
+            {
+                string localPath = AppDomain.CurrentDomain.BaseDirectory;
+                await CopyFiles(networkPath, localPath);
+
+                MessageBox.Show("Güncelleme işlemi başarıyla tamamlandı.");
+            }
+            else
+            {
+                MessageBox.Show("Ağ sürücüsüne bağlanılamadı, lütfen bağlantıyı kontrol edin.");
+            }
+        }
+
+        private bool ConnectToNetworkDrive(string networkPath, string username, string password)
+        {
+            NETRESOURCE netResource = new NETRESOURCE
+            {
+                dwType = 1,
+                lpLocalName = null,
+                lpRemoteName = networkPath
+            };
+
+            int result = WNetAddConnection2(ref netResource, password, username, 0);
+            if (result == 0)
+            {
+                return true; // Bağlantı başarılı
+            }
+            else
+            {
+                string errorMessage = GetNetworkErrorMessage(result);
+                MessageBox.Show($"Bağlantı başarısız: {errorMessage}");
+                return false;
+            }
+        }
+
+        private void DisconnectNetworkDrive(string networkPath)
+        {
+            WNetCancelConnection2(networkPath, 0, true);
+        }
+
+        private async Task CopyFiles(string sourceDir, string targetDir)
+        {
+            DirectoryInfo dir = new DirectoryInfo(sourceDir);
+            FileInfo[] files = dir.GetFiles();
+
+            foreach (FileInfo file in files)
+            {
+                string targetFilePath = Path.Combine(targetDir, file.Name);
+                await Task.Run(() => file.CopyTo(targetFilePath, true));
+            }
+        }
+
         private void Start_FormClosed(object sender, FormClosedEventArgs e)
         {
             ChangeStatusOffline();
@@ -103,7 +212,7 @@ namespace Enka_IT_Management
 
         private bool CheckLogin(string desktopName)
         {
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -143,7 +252,7 @@ namespace Enka_IT_Management
 
         public void  ChangeStatusOnline()
         {
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {
@@ -166,7 +275,7 @@ namespace Enka_IT_Management
 
         public void  ChangeStatusOffline()
         {
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
             SqlConnection connection = new SqlConnection(connectionString);
             try
             {
@@ -190,7 +299,7 @@ namespace Enka_IT_Management
         private bool CheckPermission(string username, string permissionName)
         {
             bool hasPermission = false;
-            string connectionString = "Server=192.168.10.8;Database=Enka_QS;User Id=emba;Password=manageit41;";
+            string connectionString = "Server=192.168.10.8;Database=test;User Id=test;Password=test;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -230,9 +339,9 @@ namespace Enka_IT_Management
                         {
                             FileName = "cmd.exe",
                             Arguments = "/c " + command,
-                            UseShellExecute = true,          // Yönetici izni alabilmek için true
-                            CreateNoWindow = false,          // CMD penceresini göster
-                            Verb = "runas",                  // Yönetici olarak çalıştır
+                            UseShellExecute = true,
+                            CreateNoWindow = false,
+                            Verb = "runas",
                             WindowStyle = ProcessWindowStyle.Normal
                         }
                     };
@@ -240,36 +349,31 @@ namespace Enka_IT_Management
                     process.Start();
                     process.WaitForExit();
 
-                    return process.ExitCode == 0;  // Başarıyla çalıştıysa true döner
+                    return process.ExitCode == 0;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Bir hata oluştu: " + ex.Message);
-                    return false;  // Hata varsa false döner
+                    return false;
                 }
             });
         }
 
         private void LoadCDiskInfo()
         {
-            // C sürücüsü için DriveInfo nesnesi
             DriveInfo cDrive = new DriveInfo("C");
 
             if (cDrive.IsReady)
             {
-                // Toplam boyut ve kullanılabilir alan
-                long totalSize = cDrive.TotalSize; // Toplam boyut (byte cinsinden)
-                long availableSpace = cDrive.AvailableFreeSpace; // Kullanılabilir alan (byte cinsinden)
+                long totalSize = cDrive.TotalSize;
+                long availableSpace = cDrive.AvailableFreeSpace;
 
-                // Kullanılan alanı hesapla
                 long usedSpace = totalSize - availableSpace;
-                double usedPercentage = (double)usedSpace / totalSize * 100; // Yüzde hesaplama
+                double usedPercentage = (double)usedSpace / totalSize * 100;
 
-                // Byte'tan GB'ye çevirme
                 double totalSizeGB = ConvertBytesToGigabytes(totalSize);
                 double availableSpaceGB = ConvertBytesToGigabytes(availableSpace);
 
-                // Label ve ProgressBar'ı güncelle
                 progressBarDisk.Value = (int)usedPercentage;
                 lblDiskUsage.Text = $"DISK : {usedPercentage:F2}%";
                 lbl_disk_available_storage.Text = $"Boş Alan: {availableSpaceGB:F2} GB / {totalSizeGB:F2} GB";
@@ -278,7 +382,6 @@ namespace Enka_IT_Management
             }
             else
             {
-                // Eğer C sürücüsü erişilebilir değilse hata mesajı göster
                 lblDiskUsage.Text = "C diski hazır değil veya mevcut değil.";
             }
         }
@@ -424,8 +527,8 @@ namespace Enka_IT_Management
         {
             string serviceName = "WMSPlatformTerminalService";
             string machineName = "192.168.10.9";
-            string username = $@"enka\administrator";
-            string password = "Enk1987VHT.!";
+            string username = $@"test";
+            string password = "test";
 
 
             try
@@ -544,8 +647,6 @@ namespace Enka_IT_Management
                 await RunCmdCommand("shutdown /r /t 0");
             }
         }
-
-
 
         #region Check Enka Connection
         private void CheckNetworkAndExitIfNotEnka()
@@ -923,7 +1024,6 @@ namespace Enka_IT_Management
         #region Wifi Bağlantı Kontrolü
         private async void btn_wifi_connect_Click(object sender, EventArgs e)
         {
-            // ProgressBar ve Label'ı görünür yap
             progressBar1.Visible = true;
             lbl_status.Visible = true;
 
@@ -982,7 +1082,6 @@ namespace Enka_IT_Management
                 }
 
 
-                // 4. İnternet bağlantısını kontrol et
                 lbl_status.Text = "İnternet bağlantısı kontrol ediliyor...";
                 if (CheckInternetConnection())
                 {
@@ -1007,7 +1106,6 @@ namespace Enka_IT_Management
         {
             try
             {
-                // 1. Yöntem: HTTP Request ile kontrol
                 using (HttpClient client = new HttpClient())
                 {
                     client.Timeout = TimeSpan.FromSeconds(5);
@@ -1034,7 +1132,7 @@ namespace Enka_IT_Management
             string text = GetLocalIPv4Address();
             lbl_local_ip_address.Text = text;
 
-            return false; // Eğer bir hata olursa ya da bağlantı başarısızsa, false döndür
+            return false;
 
 
         }

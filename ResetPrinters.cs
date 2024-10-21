@@ -25,7 +25,6 @@ namespace Enka_IT_Management
 
                 foreach (ManagementObject printer in printers)
                 {
-                    // Yazıcının adı ve port adı
                     string printerName = printer["Name"].ToString();
                     string portName = printer["PortName"].ToString();
 
@@ -43,19 +42,15 @@ namespace Enka_IT_Management
         {
             try
             {
-                // IP adresine göre yazıcıları bulmak için WMI sorgusu
                 string query = $"SELECT * FROM Win32_Printer WHERE PortName = 'IP_{printerIP}'";
 
-                // WMI sorgusunu çalıştır
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
                 ManagementObjectCollection printers = searcher.Get();
 
-                // Yazıcı bulunduysa kuyruğu sıfırla
                 if (printers.Count > 0)
                 {
                     foreach (ManagementObject printer in printers)
                     {
-                        // Yazıcı kuyruğundaki tüm işleri iptal et
                         printer.InvokeMethod("CancelAllJobs", null);
                         Console.WriteLine($"Yazıcının ({printerIP}) kuyruğu başarıyla temizlendi.");
                     }
@@ -73,11 +68,14 @@ namespace Enka_IT_Management
 
         private void btn_muhasebe_printer_reset_Click(object sender, EventArgs e)
         {
-            // Kullanıcının girdiği veya önceden belirlenen IP adresi
-            string printerIP = "192.168.10.104";  // Yazıcının IP adresi
+            string printerIP = "192.168.10.104";
 
-            // Yazıcı kuyruğunu IP adresine göre sıfırlama işlemi
             ResetPrinterQueueByIP(printerIP);
+        }
+
+        private void ResetPrinters_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
